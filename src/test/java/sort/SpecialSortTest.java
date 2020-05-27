@@ -100,6 +100,16 @@ public class SpecialSortTest {
         Assert.assertArrayEquals( expectedResult, numbers );
     }
 
+    @Test
+    public void testMixOddEvenSort()  {
+        int []numbers =  { -1, 2, -4, 3, -7, -16};
+        int [] expectedResult = {-7,  -1, 3, -16, -4, 2};
+
+        SpecialSort.sortOddEven(numbers);
+        Assert.assertArrayEquals( expectedResult, numbers );
+    }
+
+
 
 
 
