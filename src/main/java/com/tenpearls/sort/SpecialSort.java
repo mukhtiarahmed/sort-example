@@ -1,13 +1,13 @@
 package com.tenpearls.sort;
 
-
 public class SpecialSort {
 
     /**
      * Odd numbers are sorted before even numbers, and relative order is preserved
+     *
      * @param numbers
      */
-     public static void sortOddEven(int numbers[]) {
+    public static void sortOddEven(int numbers[]) {
 
         if (null == numbers || numbers.length <= 1) return;
 
@@ -26,7 +26,7 @@ public class SpecialSort {
 
     private static int compare(int o1, int o2) {
 
-        if ((o1 % 2 == 0 && o2 % 2 == 0) || (o1 % 2 == 1 && o2 % 2 == 1))
+        if ((o1 % 2 == 0 && o2 % 2 == 0) || (o1 % 2 == 1 && o2 % 2 == 1) || (o1 % 2 == -1 && o2 % 2 == -1))
             return o1 - o2;
 
         if (o1 % 2 == 0)
@@ -38,4 +38,5 @@ public class SpecialSort {
     }
 
 
-};
+}
+

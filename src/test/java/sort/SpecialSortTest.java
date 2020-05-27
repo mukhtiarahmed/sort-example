@@ -55,7 +55,53 @@ public class SpecialSortTest {
         Assert.assertArrayEquals( expectedResult, numbers );
     }
 
+    @Test
+    public void testSingleOddSort()  {
+        int [] numbers =  {13};
+        int [] expectedResult = {13};
+
+        SpecialSort.sortOddEven(numbers);
+        Assert.assertArrayEquals( expectedResult, numbers );
+    }
+
+    @Test
+    public void testSingleEvenSort()  {
+        int [] numbers =  {12};
+        int [] expectedResult = {12};
+
+        SpecialSort.sortOddEven(numbers);
+        Assert.assertArrayEquals( expectedResult, numbers);
+    }
+
+    @Test
+    public void testNegOddEvenSort()  {
+        int []numbers =  { - 1, - 2, -4, -3, -7, -16};
+        int [] expectedResult = {-7, -3, -1, -16, -4, -2};
+
+        SpecialSort.sortOddEven(numbers);
+        Assert.assertArrayEquals( expectedResult, numbers );
+    }
+
+    @Test
+    public void testNegOddSort()  {
+        int []numbers =  {-1,  -7, -9, -3};
+        int [] expectedResult = {-9, -7, -3, -1};
+
+        SpecialSort.sortOddEven(numbers);
+        Assert.assertArrayEquals( expectedResult, numbers );
+    }
+
+    @Test
+    public void testNegEvenSort()  {
+        int []numbers =  {-2, -4, -16, -8};
+        int [] expectedResult = { -16, -8, -4, -2};
+
+        SpecialSort.sortOddEven(numbers);
+        Assert.assertArrayEquals( expectedResult, numbers );
+    }
+
 
 
 
 }
+
