@@ -26,7 +26,7 @@ public class SpecialSort {
 
     private static int compare(int o1, int o2) {
 
-        if ((o1 % 2 == 0 && o2 % 2 == 0) || (Math.abs(o1 % 2) == 1 && Math.abs(o2 % 2) == 1))
+        if ((o1 % 2 == 0 && o2 % 2 == 0) || (o1 % 2 != 0 && o2 % 2 != 0))
             return o1 - o2;
 
         if (o1 % 2 == 0)
